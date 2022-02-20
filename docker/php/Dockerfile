@@ -14,7 +14,10 @@ RUN apt-get update \
 # Install git
 RUN apt-get update \
     && apt-get -y --no-install-recommends install git \
-    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* \
+
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN touch /run/php-fpm.pid \
     && useradd -d /home/dockeruser -u $USER_UID -ms /bin/bash $USER_NAME \

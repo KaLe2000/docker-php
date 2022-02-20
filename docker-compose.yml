@@ -36,6 +36,12 @@ services:
       - DOCKER_UID=1000
       - DOCKER_GID=1000
 
+  redis:
+    image: redis:5.0.8-alpine
+    container_name: '${PROJECT_NAME}-redis'
+    expose:
+      - 6379
+
   mysql:
     image: mysql:latest
     container_name: '${PROJECT_NAME}-mysql'
