@@ -24,7 +24,8 @@ RUN touch /run/php-fpm.pid \
     && chown $USER_UID:$USER_UID /run/php-fpm.pid
 
 COPY . /var/www
-COPY /docker/php/xdebug.ini  /usr/local/etc/php/conf.d/xdebug.ini
+COPY ./docker/php/xdebug.ini  /usr/local/etc/php/conf.d/xdebug.ini
+COPY ./docker/php/xdebug.ini  /etc/php/8.1/mods-available/xdebug-docker.ini
 
 RUN phpenmod php-ini-config \
     && phpenmod xdebug-docker
