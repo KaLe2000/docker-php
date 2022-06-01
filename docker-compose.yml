@@ -16,6 +16,7 @@ services:
       - '80:80'
     depends_on:
       - php
+      - rabbitMq
       - mysql
 #      - postgres
 
@@ -44,6 +45,19 @@ services:
     container_name: '${PROJECT_NAME}-redis'
     expose:
       - 6379
+
+  rabbitMq:
+    image: rabbitmq:3.8.9-management
+    container_name: '${PROJECT_NAME}-rabbit'
+    hostname: rabbitMq
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+    ports:
+      - "5671:5671" # standard AMQP port
+      - "5672:5672"
+      - "15671:15671"
+      - "15672:15672" # HTTP management ui
 
   mysql:
     image: mysql:latest
