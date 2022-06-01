@@ -1,2 +1,11 @@
-# docker-php
-Default docker php-fpm:8.1 repo
+# Дефолтный докер-композ для PHP проектов
+Содержит:
+- nginx
+- php
+- mysql/postgres
+- redis
+- rabbitmq
+
+Нужно добавить:
+- node для генерации фронта
+- supervisord для фона
