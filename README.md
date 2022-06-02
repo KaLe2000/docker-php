@@ -2,6 +2,7 @@
 Содержит:
 - nginx
 - php
+- cron
 - mysql/postgres
 - redis
 - rabbitmq
