@@ -10,3 +10,4 @@
 Нужно добавить:
 - node для генерации фронта
 - supervisord для фона
+- rabbitmq заменить на apache kafka
