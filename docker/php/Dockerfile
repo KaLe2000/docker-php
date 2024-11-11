@@ -1,4 +1,4 @@
-FROM phpdockerio/php:8.1-fpm
+FROM phpdockerio/php:8.3-fpm
 ARG XDEBUG_PORT
 ARG USER_UID
 ARG USER_NAME

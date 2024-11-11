@@ -8,6 +8,8 @@
 - rabbitmq
 
 Нужно добавить:
-- node для генерации фронта
-- supervisord для фона
-- rabbitmq заменить на apache kafka
+- PHP boilerplate (добавить анализаторы кода, phpunit)
+- 12 factor app (?)
+- система сбора логов (?)
+- supervisord для фона (?)
+- добавить apache kafka
